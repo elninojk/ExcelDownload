@@ -1,4 +1,18 @@
-function excelDownload(){
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Download Excel File" onclick="DownloadFile('Sample.xlsx')" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script>
+    function DownloadFile(fileName){
+        console.log("DownloadFile called")
+    var url="http://192.168.1.142:8081/dupliacateCheckProdFull.xlsx";
     $.ajax({
         url: url,
         cache: false,
@@ -36,3 +50,6 @@ function excelDownload(){
         }
     });
 }
+    </script>
+</body>
+</html>
